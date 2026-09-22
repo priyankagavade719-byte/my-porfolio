@@ -1,0 +1,375 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #333;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+nav {
+    background: rgba(15, 23, 42, 0.95);
+    padding: 18px 30px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+nav h2 {
+    color: white;
+    margin-bottom: 12px;
+    font-size: 26px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    width: 85%;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 50px;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.8s ease;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+.container h1 {
+    color: #4f46e5;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.container h2 {
+    color: #6366f1;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   PROFILE PHOTO
+========================= */
+
+.profile-photo {
+    margin: 10px auto 25px;
+}
+
+.profile-photo img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #6366f1;
+    box-shadow: 0 10px 35px rgba(79, 70, 229, 0.4);
+    transition: 0.4s;
+}
+
+.profile-photo img:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 13px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.35);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(102, 126, 234, 0.5);
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    padding: 30px 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transition: 0.4s;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(102,126,234,0.25);
+    border-color: #667eea;
+
+}
+
+.card h3 {
+    color: #4f46e5;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+
+/* =========================
+   PROJECT CARDS
+========================= */
+
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transition: 0.4s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 18px 35px rgba(79, 70, 229, 0.25);
+}
+
+.project-card h3 {
+    color: #4f46e5;
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+input,
+textarea {
+    width: 90%;
+    max-width: 550px;
+    padding: 35px;
+    margin: 30px auto;
+    border: 2px solid #ddd;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #6366f1;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+
+.social-links {
+    margin-top: 25px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 8px;
+    padding: 10px 18px;
+    border-radius: 20px;
+    background: #4f46e5;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #06b6d4;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 15px;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 15px 10px;
+    }
+
+    nav h2 {
+        font-size: 22px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px 8px;
+        font-size: 15px;
+    }
+
+    .container {
+        width: 92%;
+        padding: 30px 20px;
+        margin: 30px auto;
+    }
+
+    .container h1 {
+        font-size: 32px;
+    }
+
+    .container h2 {
+        font-size: 25px;
+    }
+
+    .container p {
+        font-size: 16px;
+    }
+
+    .card,
+    .project-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+    }
+
+    .profile-photo img {
+        width: 150px;
+        height: 150px;
+    }
+}
+home-content {
+    text-align: center;
+    width: 100%;
+}
+.home-content h1 {
+    margin-bottom: 15px;
+}
+.home-content h2 {
+    margin-bottom: 15px;
+}
+.home-content p {
+    margin-bottom: 25px;
+}
