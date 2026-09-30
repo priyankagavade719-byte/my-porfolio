@@ -1,123 +1,626 @@
-<!DOCTYPE html>
-<html lang="en">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+body {
+    font-family: Arial, sans-serif;
+    background: #fff8fc;
+    color: #25234a;
+}
 
-    <title>My Portfolio</title>
+/* Navigation */
 
-    <link rel="stylesheet" href="style.css">
-</head>
+nav {
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3efff;
+}
 
-<body>
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #4b358e;
+}
 
-    <!-- Navigation -->
-    <nav>
+.logo span {
+    display: block;
+    font-size: 14px;
+    margin-left: 38px;
+    color: #7b4ba5;
+    font-weight: normal;
+}
 
-        <div class="logo">
-             Priyanka
-            <span>Web Developer</span>
-        </div>
+.menu {
+    display: flex;
+    gap: 35px;
+}
 
-        <div class="menu">
+.menu a {
+    text-decoration: none;
+    color: #29265c;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
 
-            <a href="index.html" class="active">Home</a>
+.menu a:hover,
+.menu .active {
+    background: linear-gradient(135deg, #c94b9b, #8b45b6);
+    color: white;
+}
 
-            <a href="about.html">About</a>
+/* Hero */
 
-            <a href="skills.html">Skills</a>
+.hero {
+    min-height: 680px;
+    padding: 70px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #fff8fc,
+        #f8efff
+    );
+}
 
-            <a href="projects.html">Projects</a>
+/* Hero Text */
 
-            <a href="contact.html">Contact</a>
+.hero-text {
+    width: 55%;
+}
 
-        </div>
+.hello {
+    color: #d14b9c;
+    font-size: 32px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
 
-    </nav>
+.hero h1 {
+    font-size: 70px;
+    color: #20234b;
+    margin-bottom: 10px;
+}
 
+.hero h1 span {
+    background: linear-gradient(
+        90deg,
+        #d33b91,
+        #743bb0
+    );
 
-    <!-- Home Section -->
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 
-    <section class="hero">
+.hero h2 {
+    font-size: 38px;
+    color: #7542a5;
+    margin-bottom: 25px;
+}
 
-        <div class="hero-text">
+.description {
+    width: 650px;
+    max-width: 100%;
+    font-size: 19px;
+    line-height: 1.8;
+    color: #56617b;
+}
 
-            <p class="hello">— Hello, </p>
+/* Buttons */
 
-            <h1>
-                I am <span>Priyanka</span>
-            </h1>
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
 
-            <h2>Web Developer</h2>
+.btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background: linear-gradient(
+        135deg,
+        #c53d98,
+        #8240ae
+    );
 
-            <p class="description">
-                I am a passionate and dedicated web developer
-                who loves to create beautiful and responsive
-                web applications. Welcome to my personal portfolio!
-            </p>
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
 
+    box-shadow: 0 8px 20px rgba(140, 60, 160, 0.25);
+    transition: 0.3s;
+}
 
-            <div class="buttons">
+.btn:hover {
+    transform: translateY(-4px);
+}
 
-                <a href="about.html" class="btn">
-                    👤 About Me →
-                </a>
+.btn.outline {
+    background: transparent;
+    color: #7c3eaa;
+    border: 2px solid #8c45b4;
+    box-shadow: none;
+}
 
-                <a href="contact.html" class="btn outline">
-                    ✉️ Contact Me
-                </a>
+/* Social */
 
-            </div>
+.social {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+}
 
+.social span {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
 
-            <div class="social">
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-                <span>●</span>
-                <span>in</span>
-                <span>◎</span>
-                <span>▶️</span>
+    background: white;
+    color: #7b3fa6;
 
-            </div>
+    font-size: 20px;
+    font-weight: bold;
 
-        </div>
+    box-shadow: 0 5px 15px rgba(100, 60, 120, 0.15);
+}
 
+/* Profile Image */
 
-        <!-- Profile Photo -->
+.hero-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
 
-        <div class="hero-image">
+.circle {
+    width: 390px;
+    height: 390px;
 
-            <div class="circle">
+    border-radius: 50%;
 
-                <img src="photo.png"
-                     alt="Priyanka Profile Photo">
+    padding: 10px;
 
-            </div>
+    background: linear-gradient(
+        135deg,
+        #f26bb7,
+        #9d5be0,
+        #d9a6ff
+    );
 
-            <div class="heart"></div>
+    box-shadow:
+        0 15px 40px rgba(120, 60, 150, 0.25);
+}
 
-            <div class="star">✦</div>
+.circle img {
+    width: 100%;
+    height: 100%;
 
-        </div>
+    border-radius: 50%;
 
-    </section>
+    object-fit: cover;
 
+    border: 8px solid white;
+}
 
-    <!-- About Heading -->
+/* Decorations */
 
-    <section class="about-title">
+.heart {
+    position: absolute;
+    top: 20px;
+    right: 25px;
 
-        <div class="line"></div>
+    font-size: 60px;
+    color: #d54ca5;
 
-        <div class="heart-icon">♥️</div>
+    transform: rotate(-15deg);
+}
 
-        <div class="line"></div>
+.star {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
 
-        <h2>About Me</h2>
+    font-size: 55px;
+    color: #7645b2;
+}
 
-    </section>
+/* About Title */
 
+.about-title {
+    padding: 70px 20px;
+    text-align: center;
+    background: white;
+}
 
-</body>
+.about-title h2 {
+    font-size: 42px;
+    color: #523a91;
+    margin-top: 15px;
+}
 
-</html>
+.line {
+    display: inline-block;
+    width: 140px;
+    height: 3px;
+    background: #ef9bd0;
+    vertical-align: middle;
+    margin: 0 15px;
+}
+
+.heart-icon {
+    display: inline-block;
+    color: #e86db7;
+    font-size: 25px;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .circle {
+        width: 300px;
+        height: 300px;
+    }
+}
+.about-page {
+            min-height: 100vh;
+            padding: 60px 8%;
+            text-align: center;
+            background: linear-gradient(135deg, #fff8fc, #f3eaff);
+        }
+
+        .about-page > p {
+            color: #d34c9c;
+            font-size: 20px;
+        }
+
+        .about-page h1 {
+            font-size: 45px;
+            margin: 15px 0 35px;
+        }
+
+        .about-page h1 span {
+            color: #9b4db5;
+        }
+
+        .about-card {
+            max-width: 850px;
+            margin: auto;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            text-align: left;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px #d9c7df;
+        }
+
+        .about-photo {
+            width: 150px !important;
+            height: 150px !important;
+            min-width: 150px !important;
+            max-width: 150px !important;
+            min-height: 150px !important;
+            max-height: 150px !important;
+            border-radius: 50% !important;
+            object-fit: cover !important;
+            border: 5px solid #e6b5e8;
+        }
+
+        .about-card h2 {
+            color: #75429f;
+            margin-bottom: 15px;
+        }
+
+        .about-card p {
+            color: #62627a;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .about-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 22px;
+            border-radius: 25px;
+            background: #9848ae;
+            color: white;
+            text-decoration: none;
+        }
+        /* Skills Page */
+
+.skills-page {
+    min-height: 100vh;
+    padding: 60px 8%;
+    text-align: center;
+    background: linear-gradient(135deg, #fff8fc, #f3eaff);
+}
+
+.skills-page > p {
+    color: #d34c9c;
+    font-size: 20px;
+}
+
+.skills-page h1 {
+    font-size: 45px;
+    margin: 15px 0 40px;
+    color: #25234a;
+}
+
+.skills-page h1 span {
+    color: #9b4db5;
+}
+
+.skills-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    padding: 30px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px #d9c7df;
+}
+
+.skill-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.skill-card h2 {
+    color: #75429f;
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    color: #62627a;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Projects Page */
+
+.projects-page {
+    min-height: 100vh;
+    padding: 60px 8%;
+    text-align: center;
+    background: linear-gradient(135deg, #fff8fc, #f3eaff);
+}
+
+.projects-page > p {
+    color: #d34c9c;
+    font-size: 20px;
+}
+
+.projects-page h1 {
+    font-size: 45px;
+    margin: 15px 0 40px;
+    color: #25234a;
+}
+
+.projects-page h1 span {
+    color: #9b4db5;
+}
+
+.projects-container {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    padding: 30px 25px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px #d9c7df;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.project-card h2 {
+    color: #75429f;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #62627a;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.project-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #c94b9b, #8b45b6);
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Contact Page */
+
+.contact-page {
+    min-height: 100vh;
+    padding: 60px 8%;
+    text-align: center;
+    background: linear-gradient(135deg, #fff8fc, #f3eaff);
+}
+
+.contact-page > p {
+    color: #d34c9c;
+    font-size: 20px;
+}
+
+.contact-page h1 {
+    font-size: 45px;
+    margin: 15px 0 40px;
+    color: #25234a;
+}
+
+.contact-page h1 span {
+    color: #9b4db5;
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    text-align: center;
+}
+
+.contact-info,
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px #d9c7df;
+}
+
+.contact-info h2 {
+    color: #75429f;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: #62627a;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    margin: 18px 0;
+    color: #75429f;
+}
+
+.contact-item span {
+    color: #62627a;
+    margin-left: 8px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ead8ef;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #9b4db5;
+}
+
+.contact-form button {
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #c94b9b, #8b45b6);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 800px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
